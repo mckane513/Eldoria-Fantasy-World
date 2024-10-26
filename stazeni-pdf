@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stažení PDF - Eldoria</title>
+</head>
+<body>
+    <h1>Děkujeme za zakoupení knihy!</h1>
+    <p>Klikněte níže pro stažení PDF knihy.</p>
+    <a href="d:/eldoriaweb/stzeni-pdf.html" download>Stáhnout PDF</a>
+</body>
+</html>

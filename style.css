@@ -1,0 +1,71 @@
+
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #f5f5f5;
+    background-color: #111;
+}
+
+/* Top Banner */
+.top-banner img {
+    width: 100%;
+    height: auto;
+}
+
+/* Menu styling */
+nav {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+}
+.menu {
+    list-style-type: none;
+}
+.menu li {
+    display: inline;
+    margin: 0 15px;
+}
+.menu a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+.menu a:hover {
+    color: #ddd;
+}
+
+/* Main content sections */
+main {
+    padding: 40px;
+}
+section {
+    margin-bottom: 60px;
+}
+
+/* Footer Banner */
+.bottom-banner img {
+    width: 100%;
+    height: auto;
+}
+
+/* Section headers */
+h1 {
+    font-size: 2rem;
+    color: #e0e0e0;
+    margin-bottom: 10px;
+}
+
+/* Paragraph text */
+p {
+    font-size: 1.1rem;
+    color: #ccc;
+    line-height: 1.6;
+}
