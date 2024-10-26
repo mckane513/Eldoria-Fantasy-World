@@ -1,71 +1,65 @@
-
-/* Resetting default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body styling */
+/* Celoplošné pozadí pro celý web */
 body {
     font-family: Arial, sans-serif;
-    color: #f5f5f5;
-    background-color: #111;
-}
-
-/* Top Banner */
-.top-banner img {
-    width: 100%;
-    height: auto;
+    color: #fdfdfd; /* Světlejší barva textu pro lepší kontrast */
+    background-image: url('background.png'); /* Ujistěte se, že soubor s obrázkem pozadí je ve složce */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    padding: 0;
 }
 
 /* Menu styling */
 nav {
-    position: absolute;
-    top: 20px;
-    width: 100%;
     text-align: center;
+    padding: 20px;
 }
 .menu {
     list-style-type: none;
+    padding: 0;
 }
 .menu li {
     display: inline;
     margin: 0 15px;
 }
 .menu a {
-    color: #f5f5f5;
+    color: #fdfdfd; /* Kontrastní barva pro text v menu */
     text-decoration: none;
     font-size: 1.2rem;
 }
 .menu a:hover {
-    color: #ddd;
+    color: #eaeaea; /* Mírně světlejší odstín při najetí myší */
 }
 
-/* Main content sections */
+/* Main content */
 main {
-    padding: 40px;
+    text-align: center;
+    padding: 100px 20px;
 }
-section {
-    margin-bottom: 60px;
-}
-
-/* Footer Banner */
-.bottom-banner img {
-    width: 100%;
-    height: auto;
-}
-
-/* Section headers */
 h1 {
-    font-size: 2rem;
-    color: #e0e0e0;
-    margin-bottom: 10px;
+    font-size: 2.5rem;
+    color: #ffffff; /* Světlejší kontrastní nadpisy */
 }
-
-/* Paragraph text */
 p {
     font-size: 1.1rem;
-    color: #ccc;
+    color: #f0f0f0; /* Světlejší odstín textu pro lepší čitelnost */
     line-height: 1.6;
 }
+/* Styl pro tlačítko nákupu e-knihy */
+.purchase-button {
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.purchase-button:hover {
+    background-color: #218838;
+}
+
+
+
