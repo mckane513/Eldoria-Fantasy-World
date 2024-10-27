@@ -1,66 +1,64 @@
-/* Nastavení obrázkového pozadí pro tmavý styl */
+/* Celoplošné pozadí pro celý web */
 body {
-    background-image: url('images/background.jpg'); /* Cesta k obrázku */
-    background-size: cover; /* Přizpůsobení velikosti pozadí */
-    background-position: center;
-    background-attachment: fixed; /* Udržení pozadí na místě při scrollování */
-    color: #f0f0f0; /* Světlejší text pro lepší kontrast */
     font-family: Arial, sans-serif;
+    color: #fdfdfd; /* Světlejší barva textu pro lepší kontrast */
+    background-image: url('background.png'); /* Ujistěte se, že soubor s obrázkem pozadí je ve složce */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     margin: 0;
     padding: 0;
 }
 
-/* Stylování navigačního menu */
+/* Menu styling */
+nav {
+    text-align: center;
+    padding: 20px;
+}
 .menu {
     list-style-type: none;
     padding: 0;
-    text-align: center;
-    background-color: rgba(28, 28, 28, 0.8); /* Poloprůhledné pozadí pro čitelnost menu */
 }
-
 .menu li {
     display: inline;
-    margin-right: 15px;
+    margin: 0 15px;
 }
-
 .menu a {
+    color: #fdfdfd; /* Kontrastní barva pro text v menu */
     text-decoration: none;
-    color: #e0e0e0;
-    font-weight: bold;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Stín pro lepší čitelnost */
-    transition: color 0.3s ease;
+    font-size: 1.2rem;
 }
-
 .menu a:hover {
-    color: #ffffff;
+    color: #eaeaea; /* Mírně světlejší odstín při najetí myší */
 }
 
-/* Stínování hlavních nadpisů */
-h1, h2, h3 {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Výraznější stín pro hlavní nadpisy */
-    color: #f0f0f0;
+/* Main content */
+main {
+    text-align: center;
+    padding: 100px 20px;
 }
-
-/* Stínování běžného textu */
+h1 {
+    font-size: 2.5rem;
+    color: #ffffff; /* Světlejší kontrastní nadpisy */
+}
 p {
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Jemnější stín pro odstavce */
-    color: #e0e0e0;
+    font-size: 1.1rem;
+    color: #f0f0f0; /* Světlejší odstín textu pro lepší čitelnost */
+    line-height: 1.6;
 }
-
-/* Styl pro tlačítko nákupu */
+/* Styl pro tlačítko nákupu e-knihy */
 .purchase-button {
-    background-color: rgba(90, 90, 90, 0.8); /* Poloprůhledné pozadí pro zachování designu */
-    color: #f0f0f0;
+    background-color: #28a745;
+    color: #ffffff;
     padding: 10px 20px;
     border: none;
-    font-size: 1em;
+    border-radius: 5px;
+    font-size: 1.1rem;
     cursor: pointer;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-    transition: background-color 0.3s ease;
 }
-
 .purchase-button:hover {
-    background-color: rgba(122, 122, 122, 0.8);
+    background-color: #218838;
 }
 
 

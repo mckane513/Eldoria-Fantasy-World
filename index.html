@@ -23,7 +23,6 @@
         <section id="purchase">
             <h2>Zakupte si e-knihu Eldoria</h2>
             <p>Po zakoupení získáte okamžitý přístup ke stažení e-knihy.</p>
-            <p>Můžete tak podpořit vývoj tištěné verze knihy, která bude mít i zajímavé ilustrace.</p>
             
             <!-- PayPal Tlačítko -->
             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -32,8 +31,8 @@
                 <input type="hidden" name="item_name" value="Eldoria e-kniha">
                 <input type="hidden" name="amount" value="100.00"> <!-- Nastavte cenu -->
                 <input type="hidden" name="currency_code" value="CZK">
-                <input type="hidden" name="return" value="https://vaše-domena.com/download-page"> <!-- URL na stránku pro stažení -->
-                <input type="hidden" name="cancel_return" value="https://vaše-domena.com/cancel-page">
+                <input type="hidden" name="return" value="https://www.eldoria.cz/download-page.html"> <!-- URL na stránku pro stažení -->
+                <input type="hidden" name="cancel_return" value="https://www.eldoria.cz/cancel-page">
                 <input type="submit" value="Koupit e-knihu" class="purchase-button">
             </form>
         </section>
