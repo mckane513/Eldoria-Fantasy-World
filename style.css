@@ -60,6 +60,30 @@ p {
 .purchase-button:hover {
     background-color: #218838;
 }
+.book-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 400px; /* Maximální šířka sekce pro lepší zobrazení na velkých obrazovkách */
+}
+
+.book-cover {
+    width: 100%;
+    height: auto;
+    max-width: 250px; /* Nastavení maximální šířky obrázku */
+    border-radius: 5px; /* Přidá lehce zaoblené rohy */
+}
+
+@media (max-width: 768px) {
+    .book-section {
+        padding: 10px;
+    }
+    .book-cover {
+        max-width: 200px; /* Menší šířka na mobilních zařízeních */
+    }
+}
 
 
 
