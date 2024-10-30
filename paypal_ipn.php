@@ -6,20 +6,14 @@ error_reporting(E_ALL);
 
 // Funkce pro logování
 function log_to_file($message) {
-    $file = __DIR__ . '/ipn_log.txt'; // Používá absolutní cestu k souboru ve stejné složce
+    $file = __DIR__ . '/ipn_log.txt';
     $timestamp = date("Y-m-d H:i:s");
     file_put_contents($file, "[$timestamp] $message\n", FILE_APPEND);
 }
 
-// Logovat spuštění skriptu
-log_to_file("IPN skript spuštěn");
-
 // Příjem dat z PayPal
 $raw_post_data = file_get_contents('php://input');
 $data = 'cmd=_notify-validate&' . $raw_post_data;
-
-// Logování příchozích dat
-log_to_file("Příchozí data: " . print_r($raw_post_data, true));
 
 // Ověření s PayPal
 $ch = curl_init('https://ipnpb.paypal.com/cgi-bin/webscr');
@@ -29,13 +23,14 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
 $response = curl_exec($ch);
 curl_close($ch);
 
-// Logování odpovědi od PayPalu
-log_to_file("Odpověď od PayPal: $response");
+// Logování odpovědi PayPal a příchozích dat
+log_to_file("IPN Response: $response");
+log_to_file("POST Data: " . print_r($_POST, true));
 
-// Zkontrolujte odpověď a stav platby
+// Zpracování po ověření platby
 if ($response === "VERIFIED" && isset($_POST['payment_status']) && $_POST['payment_status'] === "Completed") {
     $payer_email = $_POST['payer_email'];
-    $download_url = "https://www.eldoria.cz/download-page.html";
+    $download_url = "https://www.eldoria.cz/Eldoria - Království Stínů.pdf";
 
     // Zaslat potvrzení e-mailem
     $subject = "Děkujeme za nákup e-knihy Eldoria!";
@@ -53,6 +48,4 @@ if ($response === "VERIFIED" && isset($_POST['payment_status']) && $_POST['payme
 } else {
     log_to_file("Platba nebyla ověřena nebo není dokončena.");
 }
-?>
-
 ?>
