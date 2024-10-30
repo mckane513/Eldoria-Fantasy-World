@@ -30,7 +30,7 @@ log_to_file("POST Data: " . print_r($_POST, true));
 // Zpracování po ověření platby
 if ($response === "VERIFIED" && isset($_POST['payment_status']) && $_POST['payment_status'] === "Completed") {
     $payer_email = $_POST['payer_email'];
-    $download_url = "https://www.eldoria.cz/Eldoria - Království Stínů.pdf";
+    $download_url = "https://www.eldoria.cz/Eldoria-Kralovstvi-Stinu.pdf";
 
     // Zaslat potvrzení e-mailem
     $subject = "Děkujeme za nákup e-knihy Eldoria!";
